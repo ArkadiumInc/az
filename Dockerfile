@@ -3,7 +3,7 @@ FROM ubuntu:latest
 WORKDIR /opt
 
 RUN apt-get update && \
-    apt-get install -y ca-certificates curl apt-transport-https lsb-release gnupg && \
+    apt-get install -y ca-certificates unzip curl apt-transport-https lsb-release gnupg && \
     mkdir -p /etc/apt/keyrings && \
     curl -sLS https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | tee /etc/apt/keyrings/microsoft.gpg > /dev/null && \
     chmod go+r /etc/apt/keyrings/microsoft.gpg && \
